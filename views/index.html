@@ -1,5 +1,6 @@
 <extends src='layout.html'>
   <block name='content'>
+      <!-- {{ JSON.stringify(rooftop.pages) }} -->
     <span>Top nav: </span>
     <ul style="display:inline; list-style:none;">
       <each loop="page of rooftop.pages">
@@ -16,6 +17,11 @@
       <a href="posts/{{post.slug}}">{{ post.title }}</a>
       <hr>
     </each>
+
+    <div class="json">
+      <h3>JSON Output for Posts</h3>
+      {{ JSON.stringify(rooftop.posts) }}
+    </div>
 
   </block>
 </extends>
