@@ -1,6 +1,6 @@
 # spike-test
 
-A test for Spike and pulling from an API like Directus&#39;
+A test for [Spike](https://www.spike.cf/) and [Rooftop CMS](https://www.rooftopcms.com)
 
 ## Setup
 

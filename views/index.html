@@ -1,17 +1,19 @@
 <extends src='layout.html'>
   <block name='content'>
+    <span>Top nav: </span>
+    <ul style="display:inline; list-style:none;">
+      <each loop="page of rooftop.pages">
+        <li style="display:inline; padding-right:2rem;">
+          <a href="/{{page.slug}}">{{ page.title }}</a>
+        </li>
+      </each>
+    </ul>
 
-    <h1>Test</h1>
-    
-    <h2>Artists</h2>
-    <each loop="artist, index of artists">
-      <a href="/artists/{{artist.slug}}">{{ artist.name }}</a>
-      <hr>
-    </each>
+    <h1>Spike & Rooftop CMS Test</h1>
 
-    <h2>Pages</h2>
-    <each loop="post, index of _collections.posts">
-      <a href="{{post._path}}">{{ post.title }}</a>
+    <h2>Posts</h2>
+    <each loop="post of rooftop.posts">
+      <a href="posts/{{post.slug}}">{{ post.title }}</a>
       <hr>
     </each>
 
